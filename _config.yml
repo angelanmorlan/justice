@@ -1,6 +1,6 @@
 ---
 title: Justice Template
-timezone: Etc/UTC
+timezone: UTC
 collections:
   posts:
     title: Posts
@@ -37,7 +37,7 @@ defaults:
       image:
         width: 440
         height: 440
-url: https://orchid-heron.cloudvent.net
+url: https://angelanmorlan.github.io/justice/
 baseurl: 
 google_analytics_key: 
 google_maps_javascript_api_key: 
