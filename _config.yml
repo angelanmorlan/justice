@@ -1,104 +1,88 @@
-# ----
-# Site
-
+---
 title: Justice Template
-url: "https://orchid-heron.cloudvent.net"
-baseurl:
-google_analytics_key:
-google_maps_javascript_api_key:
-disqus_shortname:
-
-# Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
-logo: /siteicon.png
+timezone: Etc/UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  staff_members:
+    title: Staff Members
+    output: false
+  uploads:
+    title: Uploads
+    output: true
+defaults:
+- scope:
+    path: ''
+  values:
+    layout: page
+    background_image_path: "/uploads/building.jpg"
+    image: "/uploads/building.jpg"
+- scope:
+    path: ''
+    type: posts
+  values:
+    layout: post
+    _options:
+      content:
+        width: 960
+        height: 2000
+    _comments:
+      image: Shown in social shares and the advice list.
+- scope:
+    path: ''
+    type: staff_members
+  values:
+    _options:
+      image:
+        width: 440
+        height: 440
+url: https://orchid-heron.cloudvent.net
+baseurl: 
+google_analytics_key: 
+google_maps_javascript_api_key: 
+disqus_shortname: 
+logo: "/siteicon.png"
 description: Jekyll template with example content for a law firm.
 author:
-  name:
-  email:
-  twitter: # twitter username without the @ symbol
+  name: 
+  email: 
+  twitter: 
 social:
   name: Justice Template
   links:
-    - https://github.com/CloudCannon/justice-jekyll-template
-
-# -----
-# Build
-
-timezone: Etc/UTC
-
+  - https://github.com/CloudCannon/justice-jekyll-template
 paginate: 10
 paginate_path: "/advice/:num/"
-
-collections:
-  - "staff_members"
-
-defaults:
-  -
-    scope:
-      path: ""
-    values:
-      layout: page
-      background_image_path: /uploads/building.jpg
-      image: /uploads/building.jpg
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: post
-      _options:
-        content:
-          width: 960
-          height: 2000
-      _comments:
-        image: Shown in social shares and the advice list.
-  -
-    scope:
-      path: ""
-      type: "staff_members"
-    values:
-      _options:
-        image:
-          width: 440
-          height: 440
-
 permalink: pretty
-
 jekyll-archives:
   enabled:
-    - categories
-
+  - categories
 plugins:
-  - jekyll-archives
-  - jekyll-sitemap
-  - jekyll-seo-tag
-  - jekyll-feed
-  - jekyll-paginate
-
+- jekyll-archives
+- jekyll-sitemap
+- jekyll-seo-tag
+- jekyll-feed
+- jekyll-paginate
 exclude:
-  - Gemfile
-  - Gemfile.lock
-  - README.md
-  - LICENCE
-
-# -----------
-# CloudCannon
-
+- Gemfile
+- Gemfile.lock
+- README.md
+- LICENCE
 call_to_actions:
-  - Contact
-  - Advice
-  - Map
-
+- Contact
+- Advice
+- Map
 social_icons:
-  - Facebook
-  - Google Plus
-  - Instagram
-  - LinkedIn
-  - Pinterest
-  - Tumblr
-  - Twitter
-  - YouTube
-  - RSS
-
+- Facebook
+- Google Plus
+- Instagram
+- LinkedIn
+- Pinterest
+- Tumblr
+- Twitter
+- YouTube
+- RSS
 _comments:
   large_header: Toggles the size of the top banner.
   show_in_navigation: Toggles a link in the top banner.
